@@ -47,7 +47,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  /* padding: 16px; */
   width: 320px;
 }
 .mobile-header {
@@ -57,6 +57,9 @@ img {
   justify-content: space-between;
 }
 .menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border-style: none;
   height: 24px;
@@ -65,6 +68,7 @@ img {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  padding: 16px 0;
 }
 .menu-button:hover,
 .menu-button:focus {
@@ -85,6 +89,7 @@ nav {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding: 16px 0;
 }
 .logo-header {
   color: #2e2f42;
@@ -399,7 +404,7 @@ button:focus {
 
 .footer {
   background-color: #2e2f42;
-  padding: 96px 0;
+  padding: 80px 0 96px;
 }
 .footer-position {
   display: flex;
@@ -415,7 +420,7 @@ button:focus {
 }
 .footer-link {
   display: inline-block;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 .logo-footer {
   color: #f4f4fd;
@@ -536,6 +541,94 @@ button:focus {
   margin-left: 16px;
 }
 
+/* Mobile modal window */
+
+.mobile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-modal {
+  padding: 72px 24px 40px 16px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-modal-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.mobile-nav-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.mobile-nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #404bbf;
+}
+.mobile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.mobile-address-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.mobile-address-link:hover,
+.mobile-address-link:focus {
+  color: #404bbf;
+}
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mobile-soc-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 /* Modal window */
 
 .modal-overlay {
@@ -894,7 +987,7 @@ button:focus {
     row-gap: 48px;
   }
   .footer {
-    padding: 100px 0;
+    padding: 84px 0 100px;
   }
   .footer-position {
     padding: 0;
