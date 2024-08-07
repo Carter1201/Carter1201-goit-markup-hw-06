@@ -91,7 +91,7 @@ nav {
   text-transform: uppercase;
 }
 .logo-header {
-  color: #2e2f42;  
+  color: #2e2f42;
 }
 .nav-list {
   display: flex;
@@ -138,7 +138,7 @@ nav {
 }
 .address-link {
   color: #434455;
-  
+
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -821,10 +821,10 @@ button:focus {
     margin-right: 76px;
   }
   .address-list {
-  display: flex;
-  flex-direction: row;    
-  gap: 40px;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
   .address-link {
     font-size: 14px;
     line-height: 1.5;
