@@ -541,7 +541,7 @@ button:focus {
   margin-left: 16px;
 }
 
-/* Mobile modal window */
+/* Mobile menu window */
 
 .mobile-modal-overlay {
   position: fixed;
@@ -651,12 +651,16 @@ button:focus {
   pointer-events: auto;
 }
 .modal {
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  /* width: 408px;
+  min-height: 584px; */
+  width: calc(100% - 32px);
+  max-width: 408px;
+  height: auto;
   min-height: 584px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -705,6 +709,7 @@ button:focus {
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
+  /* padding: 72px 16px 0; */
 }
 .modal-form {
   border-radius: 4px;
@@ -926,6 +931,10 @@ button:focus {
   }
   .subscribe-form {
     flex-direction: row;
+  }
+  .modal {
+    padding: 72px 24px 24px;
+    width: 408px;
   }
 }
 @media screen and (min-width: 1158px) {
