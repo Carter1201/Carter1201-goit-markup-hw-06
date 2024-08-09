@@ -170,7 +170,7 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-image.jpg);
+    url(../images/hero-image-mob-1x.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1007,5 +1007,15 @@ button:focus {
   }
   .footer-soc-media {
     margin-right: 80px;
+  }
+}
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-image-mob-2x.jpg);
   }
 }
