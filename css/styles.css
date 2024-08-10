@@ -633,6 +633,7 @@ button:focus {
   display: flex;
   justify-content: space-between;
 }
+
 /* Modal window */
 
 .modal-overlay {
@@ -804,7 +805,6 @@ button:focus {
   align-items: center;
   margin-bottom: 24px;
 }
-
 .privacy-policy {
   font-size: 12px;
   line-height: 1.17;
@@ -843,6 +843,7 @@ button:focus {
   border-style: none;
   fill: #f4f4fd;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -960,6 +961,7 @@ button:focus {
     width: 408px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1160px;
