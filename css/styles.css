@@ -30,8 +30,7 @@ img {
 }
 .container {
   max-width: 320px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -113,7 +112,6 @@ nav {
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav-link.current {
   position: relative;
 }
@@ -147,7 +145,6 @@ nav {
 }
 .address-link {
   color: #434455;
-
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -186,12 +183,10 @@ nav {
       url(../images/hero-image-mob-2x.jpg);
   }
 }
-
 .hero-content {
   text-align: center;
   margin: auto;
 }
-
 .hero-title {
   font-size: 36px;
   font-weight: 700;
@@ -242,7 +237,6 @@ button:focus {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .features {
   padding: 96px 0;
 }
@@ -252,7 +246,6 @@ button:focus {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  text-transform: capitalize;
   letter-spacing: 0.02em;
   margin-bottom: 72px;
 }
@@ -269,14 +262,13 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
 .features-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 72px;
+  position: relative;
 }
-
 .features-icon {
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -287,9 +279,11 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-
 .features-item {
   width: 100%;
   display: flex;
@@ -297,14 +291,15 @@ button:focus {
   justify-content: flex-start;
   flex-direction: column;
 }
+.features-item .section-header-item {
+  font-weight: 700;
+  font-size: 36px;
+}
 .our-team {
   background-color: #f4f4fd;
   text-align: center;
+  padding: 96px 0;
 }
-.our-team .container {
-  padding: 96px 28px;
-}
-
 .team-card {
   background-color: #fff;
   text-align: center;
@@ -430,7 +425,6 @@ button:focus {
 }
 .footer-link {
   display: inline-block;
-  /* margin-bottom: 16px; */
 }
 .logo-footer {
   color: #f4f4fd;
@@ -915,8 +909,11 @@ button:focus {
   .features-item {
     width: calc((100% - 24px) / 2);
   }
+  .features-item .section-header-item {
+    margin: 0 0 8px;
+  }
   .our-team .container {
-    padding: 96px 108px;
+    width: 584px;
   }
   .team-card {
     width: calc((100% - 24px) / 2);
@@ -934,7 +931,7 @@ button:focus {
     column-gap: 24px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 92px;
+    width: 584px;
   }
   .footer-info {
     width: 264px;
@@ -966,6 +963,7 @@ button:focus {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1160px;
+    padding: 0 15px;
   }
   .header-box {
     width: 1158px;
@@ -979,7 +977,7 @@ button:focus {
     gap: 40px;
   }
   .address-link {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
@@ -1012,8 +1010,15 @@ button:focus {
   .section-header-item {
     line-height: 1.2;
   }
+  .features-item .section-header-item {
+    font-weight: 500;
+    font-size: 20px;
+  }
   .features-icon {
-    display: auto;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   .features-item {
     width: calc((100% - 72px) / 4);
@@ -1024,8 +1029,11 @@ button:focus {
   .team-card {
     width: calc((100% - 72px) / 4);
   }
+  .our-team {
+    padding: 120px 0x;
+  }
   .our-team .container {
-    padding: 120px 16px;
+    width: 100%;
   }
   .portfolio {
     padding: 120px 0;
@@ -1041,11 +1049,13 @@ button:focus {
     padding: 84px 0 100px;
   }
   .footer-position {
+    width: 100%;
     padding: 0;
     gap: 0;
   }
   .footer-info {
     margin-right: 120px;
+    margin-left: 16px;
   }
   .footer-soc-media {
     margin-right: 80px;
